@@ -1,0 +1,32 @@
+/* Basic styling for the navigation bar */
+ul.bar {
+    list-style-type: none;
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+li.nav-item {
+    margin-right: 50px;
+    position: relative; /* Add this line to make the dropdown work */
+}
+a.nav-link {
+    text-decoration: none;
+    color: white;
+}
+/* Style for the dropdown menu */
+ul.dropdown {
+    display: none;
+    position: top;
+    top: 100%;
+    left: 0;
+    background-color: red;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+li.nav-item:hover ul.dropdown {
+    display: block;
+}
+li.nav-item ul.dropdown li {
+    margin-right: 0; /* Reset margin for dropdown items */
+}

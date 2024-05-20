@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="nav1.css">
+    <title>Sell Your Car</title>
+    <style>
+        body {
+            background-image: url('backgound.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .navbar img {
+            width: 150px;
+            height: auto;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 30px auto;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+        h1, label {
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="morscars.png" alt="MORSCARS.com">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="testar.html">عربى</a></li>
+                <li class="nav-item"><a class="nav-link" href="usedcar.html">Used</a></li>
+                <li class="nav-item"><a class="nav-link" href="newcars.html">Brand new</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Research</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="sellyourcar.html">Sell Your Car</a></li>
+                <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                <li class="nav-item"><a class="nav-link" href="signin.html">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 class="text-center my-5">Sell Your Car</h1>
+        <div class="form-container">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="car_make">Car Make:</label>
+                    <input type="text" class="form-control" id="car_make" name="car_make" required>
+                </div>
+                <div class="form-group">
+                    <label for="car_model">Car Model:</label>
+                    <input type="text" class="form-control" id="car_model" name="car_model" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

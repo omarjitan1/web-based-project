@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <title>مورزكارز</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="morscars.png" alt="مورزكارز.كوم" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="testar.html">العربية</a></li>
+                <li class="nav-item"><a class="nav-link" href="usedcar.html">المستعملة</a></li>
+                <li class="nav-item"><a class="nav-link" href="newcars.html">جديدة</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">البحث</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html">تواصل معنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="sellyourcar.html">بيع سيارتك</a></li>
+                <li class="nav-item"><a class="nav-link" href="reviews.html">التقييمات</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="signin.html">تسجيل الدخول</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('backgound.jpg'); background-size: cover;" id="hero-section">
+        <div class="container text-white text-center">
+            <h1 class="display-4">مرحبًا بك في مورزكارز</h1>
+            <p class="lead">ابحث عن سيارة أحلامك</p>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="container mb-4">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="البحث...">
+        </div>
+    </div>
+
+    <!-- Cars Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card" onclick="alert('لقد نقرت على سيارة مستعملة!')">
+                    <a href="usedcar.html">
+                        <img class="card-img-top" src="r2.jpg" alt="السيارات المستعملة">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">السيارات المستعملة</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card" onclick="alert('لقد نقرت على سيارة جديدة!')">
+                    <a href="newcars.html">
+                        <img class="card-img-top" src="hellcat.jpg" alt="السيارات الجديدة">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">السيارات الجديدة</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 مورزكارز. كل الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Brand New Cars</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: gray;
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .car, .category {
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            text-align: center;
+        }
+        .car img, .category img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .car-details {
+            text-align: left;
+        }
+        .btn-category {
+            border-radius: 50px;
+            margin: 5px;
+        }
+        .btn-category.active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(backgound.jpg);">
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="morscars.png" alt="MORSCARS.com" width="150">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="testar.html">عربى</a></li>
+                <li class="nav-item"><a class="nav-link" href="usedcar.html">Used</a></li>
+                <li class="nav-item"><a class="nav-link" href="newcars.html">Brand new</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Research</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact us</a></li>
+                <li class="nav-item"><a class="nav-link" href="sellyourcar.html">Sell Your Car</a></li>
+                <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                <li class="nav-item"><a class="nav-link" href="signin.html">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="container my-4">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search..." id="search-input">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="search-btn">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="container">
+        <h2 class="text-center text-white">Car Categories</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('evs')">EVs</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('suvs')">SUVs</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('sedans')">Sedans</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('pickups')">Pickup Trucks</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('coupes')">Coupes</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('hatchbacks')">Hatchbacks</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('wagons')">Wagons</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('convertibles')">Convertibles</button>
+            <button class="btn btn-outline-secondary btn-category" onclick="filterCategory('vans')">Vans</button>
+        </div>
+    </div>
+
+    <!-- Cars Section -->
+    <div class="container">
+        <h1 class="text-center text-white">Listed Cars</h1>
+        <p class="text-center text-white">Last updated: 4/20/2024</p>
+    
+        <div class="row" id="car-list">
+            <div class="col-md-4 car evs" data-price="25000 JOD">
+                <div class="card">
+                    <img src="mercedes_benz_g_class.jpeg" alt="Car 1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mercedes C200 AMG Kit</h5>
+                        <ul>
+                            <li>Engine
+                                <ul>
+                                    <li>1500cc</li>
+                                    <li>4 cylinder</li>
+                                    <li>mild hybrid</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="card-text">Year: 2020</p>
+                        <p class="card-text">Color: Black</p>
+                        <p class="card-text">Price: 25,000 JOD</p>
+                        <p class="card-text">Mileage: 100,000 km</p>
+                        <p class="card-text">Warranty: 1 year</p>
+                        <button class="btn btn-primary" onclick="requestCar('Mercedes C200 AMG Kit', 25000)">Request Car</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 car suvs" data-price="15000 JOD">
+                <div class="card">
+                    <img src="cars2.jpg" alt="Car 2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Volkswagen ID6 Crozz Pro</h5>
+                        <ul>
+                            <li>Engine
+                                <ul>
+                                    <li>4 cylinder</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="card-text">Year: 2022</p>
+                        <p class="card-text">Color: Blue</p>
+                        <p class="card-text">Price: 15,000 JOD</p>
+                        <p class="card-text">Mileage: 40,000 km</p>
+                        <p class="card-text">Warranty: 1 year</p>
+                        <button class="btn btn-primary" onclick="requestCar('Volkswagen ID6 Crozz Pro', 15000)">Request Car</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 car sedans" data-price="28000 JOD">
+                <div class="card">
+                    <img src="accord-7.jpeg" alt="Car 3" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Honda Accord</h5>
+                        <ul>
+                            <li>Engine
+                                <ul>
+                                    <li>6 cylinder</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="card-text">Year: 2022</p>
+                        <p class="card-text">Color: Black</p>
+                        <p class="card-text">Price: 28,000 JOD</p>
+                        <p class="card-text">Mileage: 4,000 km</p>
+                        <p class="card-text">Warranty: 1 year</p>
+                        <button class="btn btn-primary" onclick="requestCar('Honda Accord', 28000)">Request Car</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 car sedans" data-price="22000 JOD">
+                <div class="card">
+                    <img src="R.jpeg" alt="Car 4" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Camry</h5>
+                        <ul>
+                            <li>Engine
+                                <ul>
+                                    <li>6 cylinder</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p class="card-text">Year: 2019</p>
+                        <p class="card-text">Color: White</p>
+                        <p class="card-text">Price: 22,000 JOD</p>
+                        <p class="card-text">Mileage: 44,000 km</p>
+                        <p class="card-text">Warranty: 1 year</p>
+                        <button class="btn btn-primary" onclick="requestCar('Toyota Camry', 22000)">Request Car</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function filterCategory(category) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.btn-category').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Add active class to the clicked button
+            event.target.classList.add('active');
+
+            // Show/hide cars based on category
+            document.querySelectorAll('.car').forEach(car => {
+                if (car.classList.contains(category)) {
+                    car.style.display = 'block';
+                } else {
+                    car.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchBtn = document.getElementById('search-btn');
+            const searchInput = document.getElementById('search-input');
+
+            searchBtn.addEventListener('click', function () {
+                alert('Searching for: ' + searchInput.value);
+            });
+
+            const cars = document.querySelectorAll('.car');
+            cars.forEach(car => {
+                car.addEventListener('click', function () {
+                    const carName = this.querySelector('.car-details h2').innerText;
+                    alert('You clicked on ' + carName);
+                });
+            });
+
+            filterCategory('evs'); // Default to EVs category
+        });
+    </script>
+</body>
+
+</html>
